@@ -1,0 +1,6 @@
+#!/bin/bash
+CLIPBOARD=$(xclip -selection c -o)
+SENDME=$(./mainscript -b :en "${CLIPBOARD}")
+LANGUAGE=$(./mainscript -id "${CLIPBOARD}" | grep Code | awk '{print $2}')
+notify-send --urgency=normal --expire-time=20000 "${CLIPBOARD}" "${SENDME}"
+./mainscript -b -p :${LANGUAGE} "${CLIPBOARD}" > /dev/zero
