@@ -1,6 +1,6 @@
 # clipboard_reader-translator
 
-## Reads out loud your clipboard, sends a notification and reads the original clipboard out loud.
+#### Reads out loud your clipboard, sends a notification and reads the original clipboard out loud.
 
 The script automatically detects the language of the clipboard and translates (reads) them accordingly.
 
