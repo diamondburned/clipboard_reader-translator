@@ -1,6 +1,7 @@
 #!/bin/bash
 CLIPBOARD=$(xclip -selection c -o)
 SENDME=$(./mainscript -b :en "${CLIPBOARD}")
+SENDME2=$(./mainscript -show-translation n -show-prompt-message n -show-languages n -show-original-dictionary n -show-dictionary n -show-alternatives n -show-original-phonetics y "${CLIPBOARD}")
 LANGUAGE=$(./mainscript -id "${CLIPBOARD}" | grep Code | awk '{print $2}')
-notify-send --urgency=normal --expire-time=20000 "${CLIPBOARD}" "${SENDME}"
+notify-send --urgency=normal --expire-time=20000 "Translation results" "${SENDME}\n${SENDME2}"
 ./mainscript -b -p :${LANGUAGE} "${CLIPBOARD}" > /dev/zero
