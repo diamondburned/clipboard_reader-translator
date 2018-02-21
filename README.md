@@ -4,7 +4,7 @@
 
 The script automatically detects the language of the clipboard and translates (reads) them accordingly.
 
-Requirements: `gawk` (3.1+), `notify-osd` (to send notifications) and `bash`
+Requirements: `gawk` (3.1+), `notify-osd` (to send notifications), `xclip` (to read clipboard) and `bash`
 
 Optional requirements: `mpv`/`mplayer` and `mpg123` for Text-to-Speech
 
